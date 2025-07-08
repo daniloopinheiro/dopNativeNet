@@ -1,178 +1,159 @@
-# Descrição
+# dopNativeNet
 
-Este é um projeto de software que tem como objetivo [inserir objetivo principal do projeto, ex: resolver um problema específico, automatizar um processo, fornecer uma funcionalidade]. Ele foi desenvolvido utilizando [listar tecnologias e ferramentas principais, ex: .NET, RabbitMQ, MongoDB, etc.] e segue uma arquitetura [ex: MVC, DDD, microserviços, etc.] para garantir [escabilidade, desempenho, manutenibilidade, etc.].
+**Arquitetura distribuída moderna com .NET**, projetada para ambientes empresariais que demandam **alta escalabilidade**, **resiliência**, **observabilidade** e **automatização total**.
 
----
-
-## Índice
-
-- [Visão Geral](#visão-geral)
-- [Tecnologias Utilizadas](#tecnologias-utilizadas)
-- [Instalação](#instalação)
-- [Como Usar](#como-usar)
-- [Estrutura de Diretórios](#estrutura-de-diretórios)
-- [Configuração](#configuração)
-- [Contribuições](#contribuições)
-- [Licença](#licença)
-- [Contato](#contato)
+O `dopNativeNet` é um projeto de referência que integra **microserviços desacoplados** com tecnologias de ponta como **containers**, **orquestradores**, **CI/CD**, **GitOps**, **monitoramento** e **comunicação assíncrona**.
 
 ---
 
-## Visão Geral
+## 📃 Índice
 
-Este projeto visa [explicar em poucas palavras o propósito do software e o valor que ele agrega]. Ele oferece as seguintes funcionalidades principais:
-
-- **Funcionalidade 1**: [Descrição breve da funcionalidade]
-- **Funcionalidade 2**: [Descrição breve da funcionalidade]
-- **Funcionalidade 3**: [Descrição breve da funcionalidade]
-
-A arquitetura do projeto segue [exemplo: Domain-Driven Design (DDD)], o que garante [benefícios como flexibilidade, escalabilidade, etc.].
-
----
-
-## Tecnologias Utilizadas
-
-Este projeto foi desenvolvido com as seguintes tecnologias:
-
-- **Tecnologia 1**: [Descrição da tecnologia 1, ex: .NET 8, Java, etc.]
-- **Tecnologia 2**: [Descrição da tecnologia 2, ex: RabbitMQ, MySQL, etc.]
-- **Tecnologia 3**: [Descrição da tecnologia 3, ex: Docker, Kubernetes, etc.]
+1. [Visão Geral](#visão-geral)
+2. [Técnicas Aplicadas](#técnicas-aplicadas)
+3. [Instalação](#instalação)
+4. [Como Usar](#como-usar)
+5. [Arquitetura de Referência](#arquitetura-de-referência)
+6. [Contribuições](#contribuições)
+7. [Licença](#licença)
+8. [Contato](#contato)
 
 ---
 
-## Instalação
+## 🔍 Visão Geral
 
-### Pré-requisitos
+Este projeto demonstra uma implementação robusta de sistemas distribuídos com .NET 7+, aplicando:
 
-Certifique-se de que você tem as seguintes ferramentas instaladas em seu ambiente de desenvolvimento:
-
-- **Ferramenta 1**: [Link para o download ou instrução de instalação]
-- **Ferramenta 2**: [Link para o download ou instrução de instalação]
-
-### Passos para Instalar
-
-1. Clone o repositório:
-
-   ```bash
-   git clone https://github.com/seu-usuario/nome-do-projeto.git
-   cd nome-do-projeto
-   ```
-
-2. Instale as dependências do projeto:
-
-   Se estiver utilizando o Visual Studio ou VS Code, abra a solução e restaure os pacotes.
-
-   Ou, se estiver utilizando a linha de comando, execute:
-
-   ```bash
-   dotnet restore
-   ```
-
-3. [Instrução de configuração, ex: configurar o banco de dados, variáveis de ambiente, etc.]
-
-4. Para rodar o projeto localmente, use o seguinte comando:
-
-   ```bash
-   dotnet run
-   ```
-
-   Ou, se estiver usando containers Docker, execute:
-
-   ```bash
-   docker-compose up
-   ```
+* Separacão de responsabilidades via **microserviços**
+* Execução via **containers Docker**
+* Orquestração com **Kubernetes / Azure Container Apps**
+* Integração com **mensageria** (Kafka, RabbitMQ)
+* Automatização com **GitHub Actions / GitOps**
+* Observabilidade com **OpenTelemetry**, **Prometheus**, **Grafana**, **Datadog**, **Elastic Stack**
+* Escalabilidade horizontal e resiliente
 
 ---
 
-## Como Usar
+## 🌐 Técnicas Aplicadas
 
-Este projeto pode ser utilizado para [explicar de forma prática como o usuário pode interagir com o sistema]. Exemplos de uso:
+| Categoria              | Tecnologias Utilizadas                                           |
+| ---------------------- | ---------------------------------------------------------------- |
+| Linguagem              | .NET 7+, C#                                                      |
+| Microsserviços         | REST, gRPC, Event-Driven, Domain-Oriented Services               |
+| Containers             | Docker, Docker Compose                                           |
+| Orquestração           | Kubernetes, Kustomize, Helm                                      |
+| Comunicação Assíncrona | Apache Kafka, RabbitMQ, Azure Service Bus                        |
+| Backing Services       | PostgreSQL, Redis, MongoDB, ElasticSearch, Azure Blob Storage    |
+| CI/CD                  | GitHub Actions, GitLab CI, ArgoCD (GitOps)                       |
+| DevOps                 | Docker Registry, Kubernetes, Observability Stack                 |
+| Observabilidade        | OpenTelemetry, Grafana, Prometheus, Jaeger, Datadog, Elastic APM |
+| Monitoramento          | Health Checks, Dashboards, Alerts, Traces, Logs estruturados     |
 
-1. **Endpoint 1**:
-   - **Método HTTP**: GET/POST
-   - **URL**: `/api/exemplo`
-   - **Descrição**: [Breve descrição do que esse endpoint faz]
-   
-2. **Endpoint 2**:
-   - **Método HTTP**: GET/POST
-   - **URL**: `/api/exemplo/{id}`
-   - **Descrição**: [Breve descrição do que esse endpoint faz]
+---
 
-### Exemplos de uso com cURL ou Postman
+## ⚙️ Instalação
 
-**Requisição de exemplo**:
+### Requisitos
+
+* [.NET 7 SDK](https://dotnet.microsoft.com/en-us/download)
+* [Docker](https://www.docker.com/)
+* [Kubernetes](https://kubernetes.io/) (ou minikube/k3d)
+* [Helm](https://helm.sh/)
+* [Git](https://git-scm.com/)
+
+### Clonar o repositório
 
 ```bash
-curl -X GET http://localhost:5000/api/exemplo -H "Content-Type: application/json"
+git clone https://github.com/daniloopinheiro/dopNativeNet.git
+cd dopNativeNet
 ```
 
----
-
-## Estrutura de Diretórios
-
-A estrutura do projeto segue uma organização modular e de fácil manutenção:
-
-```
-src/
-├── API/                # Camada de apresentação (controladores e endpoints da API)
-├── Application/        # Camada de lógica de negócios
-├── Domain/             # Camada de domínio (entidades e interfaces)
-├── Infrastructure/     # Camada de infraestrutura (conexões com banco, serviços, etc.)
-```
-
----
-
-## Configuração
-
-Este projeto exige algumas configurações adicionais, como variáveis de ambiente, arquivos de configuração ou serviços externos. As instruções de configuração podem ser encontradas abaixo:
-
-### Configuração do Banco de Dados
-
-1. No arquivo `appsettings.json`, adicione suas configurações de banco de dados, por exemplo:
-
-```json
-{
-  "DatabaseSettings": {
-    "ConnectionString": "mongodb://localhost:27017",
-    "DatabaseName": "MeuBancoDeDados"
-  }
-}
-```
-
-2. Para configuração de variáveis de ambiente, adicione as seguintes variáveis ao seu ambiente de execução:
+### Subir os containers
 
 ```bash
-DATABASE_URL=mongodb://localhost:27017
-SECRET_KEY=alguma_chave_secreta
+docker-compose up -d
 ```
 
-### Configuração de API Externa (se necessário)
+### Aplicar manifestos no Kubernetes (exemplo com Kustomize)
 
-Caso o projeto dependa de APIs externas, configure as credenciais ou chaves de acesso no arquivo de configuração.
-
----
-
-## Contribuições
-
-Contribuições são bem-vindas! Para contribuir com o projeto, siga estas etapas:
-
-1. Faça um **fork** do repositório.
-2. Crie uma nova branch para sua feature (ex: `git checkout -b feature/nova-feature`).
-3. Faça as alterações necessárias e commit (ex: `git commit -m 'Adiciona nova-feature'`).
-4. Envie as alterações para seu repositório (ex: `git push origin feature/nova-feature`).
-5. Crie um **pull request** para a branch principal do repositório original.
+```bash
+kubectl apply -k k8s/overlays/dev
+```
 
 ---
 
-## Licença
+## 🚀 Como Usar
 
-Este projeto está licenciado sob a Licença [Nome da Licença, ex: MIT]. Consulte o arquivo [LICENSE](LICENSE) para mais detalhes.
+### Iniciar aplicações
+
+```bash
+cd src/Services/OrderService
+dotnet run
+```
+
+### Executar testes automatizados
+
+```bash
+dotnet test
+```
+
+### Acessar Swagger / Endpoints
+
+```
+https://localhost:5001/swagger
+```
 
 ---
 
-## Contato
+## 🛀 Arquitetura de Referência
 
-Caso tenha dúvidas ou sugestões, entre em contato:
+```bash
+dopNativeNet/
+│
+├── src/
+│   ├── Services/                # Microserviços independentes
+│   │   ├── OrderService/       
+│   │   ├── CatalogService/     
+│   │   └── PaymentService/     
+│   
+│   ├── BuildingBlocks/         # Reutilizáveis (EventBus, Middlewares, Logging)
+│   ├── Observability/          # Instrumentação com OpenTelemetry
+│   ├── Infrastructure/         # Repositórios, Mensageria, Caches
+│   └── Gateway/                # API Gateway (YARP, Ocelot, BFF)
+│
+├── tests/                      # Testes unitários e de integração
+├── k8s/                        # Manifests do Kubernetes (base/overlays)
+├── docker-compose.yml          # Subida local de serviços e dependências
+├── .github/workflows/          # CI/CD (GitHub Actions)
+└── README.md
+```
 
-- **Email**: [dopme.io](mailto:daniloopinheiro@dopme.io)
-- **LinkedIn**: [Danilo O. Pinheiro](https://www.linkedin.com/in/daniloopinheiro/)
+---
+
+## 📄 Contribuições
+
+Contribuições são bem-vindas! Para colaborar:
+
+1. Fork este repositório
+2. Crie uma branch: `git checkout -b feature/nova-feature`
+3. Commit: `git commit -m 'feat: nova funcionalidade'`
+4. Push: `git push origin feature/nova-feature`
+5. Abra um **Pull Request**
+
+---
+
+## 📅 Licença
+
+Este projeto está sob a [Licença MIT](LICENSE).
+
+---
+
+## 👋 Contato
+
+* **Email Pessoal**: [daniloopro@gmail.com](mailto:daniloopro@gmail.com)
+* **Email Empresarial**: [devsfree@devsfree.com.br](mailto:devsfree@devsfree.com.br)
+* **Consultoria**: [contato@dopme.io](mailto:contato@dopme.io)
+* **LinkedIn**: [Danilo O. Pinheiro](https://www.linkedin.com/in/daniloopinheiro)
+
+---
+
+<p align="center">Feito com ❤️ por <strong>Danilo O. Pinheiro</strong><br/> <a href="https://devsfree.com.br" target="_blank">DevsFree</a> • <a href="https://dopme.io" target="_blank">dopme.io</a></p>
