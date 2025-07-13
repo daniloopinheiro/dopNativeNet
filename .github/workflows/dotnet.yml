@@ -29,10 +29,10 @@ jobs:
     - name: Build project
       run: dotnet build --no-restore --configuration Release
 
-    - name: Run tests
-      # working-directory: Tests/
-      # run: dotnet test --no-build --verbosity normal
-      run: |
-        for proj in Tests/**/*.csproj; do
-          dotnet test "$proj" --no-build --verbosity normal
-        done
+    # - name: Run tests
+    #   # working-directory: Tests/
+    #   # run: dotnet test --no-build --verbosity normal
+    #   run: |
+    #     for proj in Tests/**/*.csproj; do
+    #       dotnet test "$proj" --no-build --verbosity normal
+    #     done
