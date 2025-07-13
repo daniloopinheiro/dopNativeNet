@@ -11,22 +11,23 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
+    - name: Checkout repository
+      uses: actions/checkout@v4
 
-    - name: Setup .NET
+    - name: Setup .NET 9 Preview
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: 9.0.x
+        include-prerelease: true
 
     - name: Restore dependencies
       run: dotnet restore
 
-    - name: Build
-      run: dotnet build --no-restore
+    - name: Build project
+      run: dotnet build --no-restore --configuration Release
 
-    - name: Test
+    - name: Run tests
       run: dotnet test --no-build --verbosity normal
