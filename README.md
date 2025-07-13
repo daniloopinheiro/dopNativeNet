@@ -1,5 +1,6 @@
 # dopNativeNet
-[![dopNN Net - CI](https://github.com/daniloopinheiro/dopNativeNet/actions/workflows/dotnet.yml/badge.svg)](https://github.com/daniloopinheiro/dopNativeNet/actions/workflows/dotnet.yml)
+
+[![dopNN Net - CI](https://github.com/daniloopinheiro/dopNativeNet/actions/workflows/dotnet.yml/badge.svg?branch=develop)](https://github.com/daniloopinheiro/dopNativeNet/actions/workflows/dotnet.yml)
 
 **Arquitetura distribuída moderna com .NET**, projetada para ambientes empresariais que demandam **alta escalabilidade**, **resiliência**, **observabilidade** e **automatização total**.
 
