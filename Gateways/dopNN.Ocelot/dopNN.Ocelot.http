@@ -1,0 +1,6 @@
+@dopNN.Ocelot_HostAddress = http://localhost:5201
+
+GET {{dopNN.Ocelot_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

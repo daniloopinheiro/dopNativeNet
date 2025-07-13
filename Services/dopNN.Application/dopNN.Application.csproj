@@ -12,7 +12,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\dopNN.Domain\dopNN.Domain.csproj" />
-    <ProjectReference Include="..\dopNN.Infrastructure\dopNN.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

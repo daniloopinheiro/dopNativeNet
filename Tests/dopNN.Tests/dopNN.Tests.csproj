@@ -1,0 +1,21 @@
+<Project Sdk="MSTest.Sdk/3.6.4">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <UseVSTest>true</UseVSTest>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="coverlet.collector" Version="6.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Infrastructure\dopNN.Infrastructure\dopNN.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\Services\dopNN.Api\dopNN.Api.csproj" />
+    <ProjectReference Include="..\..\Services\dopNN.Application\dopNN.Application.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="EventBus - Copy\**" />
+    <Compile Remove="Logging - Copy\**" />
+    <Compile Remove="Middlewares - Copy\**" />
+    <Compile Remove="SharedKernel - Copy\**" />
+    <EmbeddedResource Remove="EventBus - Copy\**" />
+    <EmbeddedResource Remove="Logging - Copy\**" />
+    <EmbeddedResource Remove="Middlewares - Copy\**" />
+    <EmbeddedResource Remove="SharedKernel - Copy\**" />
+    <None Remove="EventBus - Copy\**" />
+    <None Remove="Logging - Copy\**" />
+    <None Remove="Middlewares - Copy\**" />
+    <None Remove="SharedKernel - Copy\**" />
+  </ItemGroup>
+
+</Project>

@@ -1,8 +1,7 @@
 using dopNN.Application.DTOs;
-using dopNN.Application.Extensions;
-using dopNN.Application.Interface;
-using dopNN.Domain.Interfaces;
 using Microsoft.AspNetCore.Mvc;
+using dopNN.Application.Interface;
+using dopNN.Application.Extensions;
 
 namespace dopNN.Api.Controllers
 {
